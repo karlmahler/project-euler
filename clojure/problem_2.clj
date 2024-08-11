@@ -13,6 +13,11 @@
 ;; You should have received a copy of the GNU General Public License
 ;; along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
+(declare generate-fibonacci-series
+         nth-fibonacci
+         filter-even-fibonacci
+         filter-fibonacci-below)
+
 (defn generate-fibonacci-series []
   (let [natural-numbers (iterate inc 1)]
     (for [x natural-numbers] (nth-fibonacci x))))
