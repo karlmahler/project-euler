@@ -24,8 +24,8 @@
          factors []]
     (let [prime (first primes)]
       (cond
-        (= (/ x prime) 1.0) (cons prime factors)
-        (divisible? x prime) (recur (float (/ x prime))
+        (== (/ x prime) 1.0) (cons prime factors)
+        (divisible? x prime) (recur (/ x prime)
                                      primes (cons prime factors))
         :else (recur x (rest primes) factors)))))
 
