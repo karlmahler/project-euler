@@ -24,7 +24,7 @@
   (or (first (for [triplet triplets
                    :let [triplet-sum (reduce + triplet)]
                    :while (<= triplet-sum sum)
-                   :when (= triplet-sum sum)] triplet))) '())
+                   :when (= triplet-sum sum)] triplet)) '()))
 
 (defn generate-triplets
   ([]
@@ -49,10 +49,10 @@
        (pos? number)))
 
 (defn -main []
-  (let [problem-sum 100
+  (let [problem-sum 1000
         triplets (generate-triplets 5)
         result-triplet (find-triplet-for-which-sum triplets problem-sum)
-        result-product (reduce * 0 result-triplet)]
+        result-product (reduce * result-triplet)]
     (println result-product)))
 
 (-main)
